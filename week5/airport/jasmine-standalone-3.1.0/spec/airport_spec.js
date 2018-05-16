@@ -21,14 +21,16 @@ describe('planes takeoff from the airport', function() {
 
 describe('airport capacity', function() {
   it ("does not allow planes to land if the airport is full", function () {
-    capacity === 10
-    (airport.land(plane)).times(10)
+    for(var i=0; i < 50; i++) {
+      (airport.land(plane1));
+    }
     airport.land(plane2)
     expect(airport.planes).not.toContain(plane2);
   });
   it ("throws an error message trying to land a plane if the airport is full", function () {
-    capacity === 10
-    (airport.land(plane)).times(10)
+    for(var i=0; i < 50; i++) {
+      (airport.land(plane1));
+    }
     expect(airport.land(plane2)).toThrowError("Cannot land plane, airport is full")
   });
 });
